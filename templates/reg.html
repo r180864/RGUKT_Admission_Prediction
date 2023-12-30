@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IIIT Admission Prediction</title>
+	<link rel="stylesheet" type="text/css" href="static/reg.css">
+</head>
+<body>
+<div class="main">
+<div class="register">
+	<h2 id="title">IIIT ADMISSION PREDICTION</h2>
+	<form id="register" method="POST" , action="{{url_for('home')}}">
+
+		<label>Name : </label>
+		<br>
+		<input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+		<br><br>
+		
+		<label>Hall Ticket Number : </label>
+		<br>
+		<input type="text" name="ht" id="Hallticket" placeholder="Enter Your Hallticket number" required>
+		<br><br>
+		<label>CGPA : </label>
+		<br>
+		<input type="text" name="gpa" id="cgpa" placeholder="Enter 10th GPA" required>
+		<br><br>
+		
+		<label>Gender : </label>
+		<br>
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="gender" id="male" value="Male" >
+		&nbsp;
+		<span id="male">Male</span>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="gender" id="female" value="Female">
+		&nbsp;
+		<span id="female">Female</span>
+		<br><br>
+
+		<label>School Type : </label>
+		<br>
+		<select name="school" id="school_type" required>
+			<!-- <option value="" disabled selected></option> -->
+			<option value="Govt">Govt</option>
+			<option value="Private">Private</option>
+        </select>
+        <br><br>
+
+		<label>Caste : </label>
+		<br>
+		<select name="caste" id="Caste">
+        <option value="OC">OC</option>
+        <option value="BC-A">BC-A</option>
+        <option value="BC-B">BC-B</option>
+        <option value="BC-C">BC-C</option>
+        <option value="BC-D">BC-D</option>
+        <option value="BC-E">BC-E</option>
+        <option value="SC">SC</option>
+        <option value="ST">ST</option>
+        </select>
+		<div class="inpt">
+		<input  type="submit" value="predict" name="submit" id="submit">
+		</div>
+	</form>
+</div>
+</div>
+<script>
+	console.log("Page Loaded");
+	const nameval=()=>{
+	if(document.getElementById("name").value==null)
+	{
+		alert("Empty");
+	}
+}
+</script>
+
+</body>
+</html>
